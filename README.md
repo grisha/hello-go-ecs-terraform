@@ -55,7 +55,7 @@ write up.
 
 1. Once it's all created, you should be able to hit the ELB DNS name with your browser and see the app in action.
 
-1. In this set up Terraform uses the `.git/logs/HEAD` file as the indicator that code has changed, but this file only changes when you commit something. If you want to deploy the code that you currently have, you can do this:
+1. In this set up Terraform uses the `.git/logs/HEAD` file as the indicator that code has changed, but this file only changes when you commit something (The idea being that your CI, e.g. Jenkins would actually perform the `make apply`). If you want to force deploy the code that you currently have, you can do this:
    ```sh
    make force_deploy
    ```
