@@ -1,0 +1,14 @@
+[
+  {
+      "name": "${name}",
+      "image": "${image}",
+      "memory": 128,
+      "essential": true,
+      "portMappings": [
+          {
+              "containerPort": ${docker_port},
+              "hostPort": ${host_port}
+          }
+      ]
+  }
+]
