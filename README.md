@@ -1,6 +1,10 @@
 
 A "Hello World" in Golang deployed to AWS ECS (Docker) using Terraform
 
+Big thanks to [Tadas Vilkeliskis](http://vilkeliskis.com/about/) for
+[Bootstrapping Docker Infrastructure With Terraform](http://vilkeliskis.com/blog/2016/02/10/bootstrapping-docker-with-terraform.html)
+write up.
+
 # How to use this
 1. Make sure you have the following installed and/or created/configured/working:
    * [Docker](http://www.docker.com)
