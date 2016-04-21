@@ -47,9 +47,15 @@ A "Hello World" in Golang deployed to AWS ECS (Docker) using Terraform
   make apply
   ```
 
-1. You should now see a load balancer in the AWS console, where it should list its DNS name. You should also see an ECS load balancer along with a service and its tasks and associated EC2 instances. The whole thing will take a few minutes to create.
+1. You should now see a load balancer in the AWS console, where it should list its DNS name. You should also see an ECS service and its tasks and associated EC2 instances. The whole thing will take a few minutes to create.
 
 1. Once it's all created, you should be able to hit the ELB DNS name with your browser and see the app in action.
+
+1. In this set up Terraform uses the `.git/logs/HEAD` file as the indicator that code has changed, but this file only changes when you commit something. If you want to deploy the code that you currently have, you can do this:
+   ```sh
+   make force_deploy
+   ```
+   Once you do this, you should see the ECS gradually replace your tasks with the new version.
 
 1. When finished, you can destroy everything with:
 
